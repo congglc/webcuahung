@@ -14,6 +14,8 @@ export const ROUTERS = {
     CART: "/gio-hang",
     ORDER_SUCCESS: "/dat-hang-thanh-cong",
     ORDER_HISTORY: "/lich-su-mua-hang",
+    REVIEW: "/danh-gia/:id",
+    ALL_REVIEWS: "/tat-ca-danh-gia/:id",
   },
 
   ADMIN: {
@@ -28,4 +30,3 @@ export const ROUTERS = {
     STATISTICS: `${ADMIN_PATH}/thong-ke`,
   },
 }
-

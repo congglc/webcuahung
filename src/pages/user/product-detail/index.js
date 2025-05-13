@@ -310,10 +310,12 @@ const ProductDetail = () => {
                 </div>
 
                 <div className="review-actions">
-                  <button className="write-review-btn">
+                  <Link to={`/danh-gia/${id}`} className="write-review-btn">
                     <span>+</span> Viết đánh giá
-                  </button>
-                  <button className="view-all-reviews-btn">Xem {product.reviewCount} đánh giá &gt;</button>
+                  </Link>
+                  <Link to={`/tat-ca-danh-gia/${id}`} className="view-all-reviews-btn">
+                    Xem {product.reviewCount} đánh giá &gt;
+                  </Link>
                 </div>
               </div>
             )}
@@ -357,4 +359,3 @@ const ProductDetail = () => {
 }
 
 export default memo(ProductDetail)
-

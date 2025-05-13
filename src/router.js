@@ -16,6 +16,8 @@ import YeezyBrand from "pages/user/brand/yeezy"
 import OtherBrands from "pages/user/brand/other"
 import Sale from "pages/user/sale"
 import Shoelaces from "pages/user/shoelaces"
+import Review from "pages/user/review"
+import AllReviews from "pages/user/all-reviews"
 
 import MasterAdminLayout from "pages/admin/theme/masterLayout"
 
@@ -26,6 +28,8 @@ import AddProduct from "pages/admin/add-product"
 import Orders from "pages/admin/orders"
 import Brands from "pages/admin/brands"
 import Categories from "pages/admin/categories"
+import Customers from"pages/admin/customers"
+import Statistics from "pages/admin/statistics"
 
 const renderUserRouter = () => {
   const UserRouters = [
@@ -89,6 +93,15 @@ const renderUserRouter = () => {
       path: "/day-giay",
       component: <Shoelaces />,
     },
+    // For user review pages
+    {
+      path: "/danh-gia/:id",
+      component: <Review />,
+    },
+    {
+      path: "/tat-ca-danh-gia/:id",
+      component: <AllReviews />,
+    },
   ]
   return (
     <MasterUserLayout>
@@ -131,6 +144,14 @@ const renderAdminRouter = () => {
       path: ROUTERS.ADMIN.CATEGORIES,
       component: <Categories />,
     },
+    {
+      path: ROUTERS.ADMIN.CUSTOMERS,
+      component: <Customers />,
+    },
+    {
+      path: ROUTERS.ADMIN.STATISTICS,
+      component: <Statistics />,
+    },
   ]
   return (
     <MasterAdminLayout>
@@ -151,4 +172,3 @@ const RouterCustom = () => {
 }
 
 export default RouterCustom
-
